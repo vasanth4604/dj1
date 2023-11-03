@@ -1,0 +1,53 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS PROJECT</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+
+<h2 align="center">ART GALLERY SYSTEM</h2> <br>
+
+ <nav class="navbar">
+
+      <div class="logo">LOGO</div>
+
+     <ul class="nav-links">
+
+          <div class="menu">
+
+
+<li>    <a href="{% url 'home' %}">Artlist</a> </li>&nbsp;&nbsp;&nbsp;
+<li>    <a href="{% url 'about' %}">Customer</a>&nbsp;&nbsp;&nbsp;</li>
+<li class="services">
+
+    <a href="#">Login</a>&nbsp;&nbsp;&nbsp;
+
+     <ul class="dropdown">
+            <li><a href="{% url 'artlist' %}">Artlist</a></li>
+            <li><a href="{% url 'myworks' %}">Myworks</a></li>
+
+          </ul>
+
+
+</li>
+
+ <li>
+     <a href="{% url 'profile' %}">Profile</a>    </li>
+
+              </div>
+     </ul>
+ </nav>
+<br></br>
+
+{% block 'body' %}
+
+<p>I am in Home Page</p>
+<br><br>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'artist/adminhome.html'%}
+{% block content %}
+<table>
+  <tr>
+   <th>City Name  </th>
+      <br>
+   <th>Temperature</th>
+  </tr>
+  <tr>
+      <td>{{ data.name }}</td>
+      <td>{{data.main.temp}}</td>
+  </tr>
+</table>
+{% endblock %}

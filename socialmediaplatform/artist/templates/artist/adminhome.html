@@ -1,0 +1,117 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <style>
+/* Apply styles to the table */
+table {
+  width: 100%; /* Make the table expand to 100% of the container */
+  border-collapse: collapse; /* Remove border spacing between cells */
+  border: 1px solid #ccc; /* Add a border around the table */
+}
+
+/* Style table header (th) */
+th {
+  background-color: #333; /* Header background color */
+  color: white; /* Header text color */
+  text-align: left; /* Header text alignment */
+  padding: 10px; /* Header cell padding */
+}
+
+/* Style table rows (td) */
+td {
+  border: 1px solid #ccc; /* Add borders to table cells */
+  padding: 8px; /* Cell padding */
+}
+
+/* Add an alternating row background color for better readability */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Even row background color */
+}
+
+/* Style the table heading */
+h1 {
+  text-align: center; /* Center align the heading */
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #333; /* Background color for the navigation bar */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #555; /* Background color when hovered */
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333; /* Background color for the navigation bar */
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #555; /* Background color for the navigation bar when hovered */
+}
+
+    </style>
+</head>
+<body>
+    <img src="{% static 'artist/images/logo.jpg' %}" height="100" width="100">
+    <center>
+        <img src="{% static 'artist/images/logo1.jpg' %}" height="100" width="100">
+        <h1>ArtGallery</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'artist/adminhome' %}">Home</a></li>
+                <li><a href="{% url 'artist/myworks' %}">My Works</a></li>
+                <li><a href="{% url 'artist/profile' %}">Profile</a></li>
+                <li><a href="{% url 'artist/history' %}">History</a></li>
+                <li><a href="{% url 'artist/artlist' %}">Art List</a></li>
+                <li><a href="{% url 'climate' %}">Climate</a></li>
+                <li><a href="{% url 'artist/send_otp' %}">Send otp</a> </li>
+                <li><a href="{% url 'artist/list_person' %}">List Person</a> </li>
+
+            </ul>
+        </nav>
+    </center>
+    {% block content %}
+    <h1> I am in Home Page </h1>
+    {% endblock %}
+    <h6>Copyright © 2023</h6>
+</body>
+</html>

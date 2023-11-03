@@ -1,0 +1,24 @@
+{% extends 'artist/adminhome.html' %}
+
+{% block content %}
+
+  <h1>View My Works</h1>
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Document</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>Inspirational Source</th>
+    </tr>
+    {% for w in mw %}
+    <tr>
+      <td>{{ w.category }}</td>
+      <td>{{ w.doc }}</td>
+      <td>{{ w.price }}</td>
+      <td>{{ w.rating }}</td>
+      <td>{{ w.inspiration }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

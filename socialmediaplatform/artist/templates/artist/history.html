@@ -1,0 +1,23 @@
+{% extends 'artist/adminhome.html'%}
+{% block content %}
+<h3>View My Previous Activities
+<table>
+  <tr>
+    <th>noc</th>
+    <th>pdate</th>
+    <th>mop</th>
+    <th>amount</th>
+    <th>category</th>
+  </tr>
+        {% for w in works %}
+  <tr>
+    <td>{{ w.noc }}</td>
+    <td>{{ w.pdate }}</td>
+    <td>{{ w.mop }}</td>
+    <td>{{ w.amount }}</td>
+    <td>{{ w.category }}</td>
+  </tr>
+{% endfor %}
+</table>
+</h3>
+{% endblock %}

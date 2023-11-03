@@ -1,0 +1,17 @@
+
+{% extends 'artist/adminhome.html'%}
+{% block content %}
+<table>
+  <tr>
+    <th>name</th>
+    <th>Email</th>
+    <th>Catagery</th>
+  </tr>
+        {% for d in data %}
+  <tr>
+    <td>{{ d.name }}</td>
+    <td>{{ d.aemail }}</td>
+    <td>{{ d.category }}</td>
+  </tr>
+{% endfor %}
+{% endblock %}
